@@ -29,7 +29,7 @@ const AboutSection: React.FC<AboutSectionProps> = ({ darkMode, setCursorVariant 
                 <div className="w-full h-full relative">
                     <img
                         id="profile-image"
-                        src="images/Nathan_desforges.png"
+                        src="/images/Nathan_desforges.png"
                         alt="Nathan Desforges"
                         className="w-50% h-50% object-cover grayscale  editable-image"
                         referrerPolicy="no-referrer"
