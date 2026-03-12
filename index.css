@@ -1,0 +1,24 @@
+
+/* Scroll Preview Animation for Homepage Iterations */
+.scroll-preview-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.scroll-preview {
+  display: block;
+  width: 100%;
+  height: auto !important; /* Override h-full */
+  min-height: 100%;
+  object-fit: cover;
+  position: relative;
+  top: 0;
+  transform: translateY(0);
+  transition: transform 8s ease-in-out, top 8s ease-in-out;
+  will-change: transform, top;
+}
+
+.scroll-preview-container:hover .scroll-preview {
+  top: 100%;
+  transform: translateY(-100%);
+}

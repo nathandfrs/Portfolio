@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio | Creative Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Manrope', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+            },
+            colors: {
+              accent: 'var(--color-accent)', // Dynamic Accent
+              dark: '#050505',
+              light: '#f2f2f2',
+            },
+            cursor: {
+              none: 'none',
+            }
+          }
+        }
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Manrope:wght@200;400;600;800&display=swap" rel="stylesheet">
+    <style>
+      /* Register property for smooth interpolation */
+      @property --color-accent {
+        syntax: '<color>';
+        inherits: true;
+        initial-value: #d8b4fe;
+      }
+
+      :root {
+        --color-accent: #cd93ff; /* Soft Light Purple for Light Mode */
+      }
+
+      .dark {
+        --color-accent: #ccff00; /* Vivid Lime Green for Dark Mode */
+      }
+
+      body {
+        cursor: none; /* Hide default cursor */
+        /* Smoothly transition background and colors, including the custom property */
+        transition: background-color 0.5s ease, color 0.5s ease, --color-accent 0.5s ease;
+      }
+      
+      /* Custom scrollbar for Webkit */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #050505;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #333;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--color-accent);
+      }
+      .blend-difference {
+        mix-blend-mode: difference;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "framer-motion": "https://esm.sh/framer-motion@^12.29.2",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-light text-dark dark:bg-dark dark:text-light antialiased overflow-x-hidden">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
