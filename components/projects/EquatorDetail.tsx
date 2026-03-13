@@ -64,7 +64,7 @@ const EquatorDetail: React.FC<EquatorDetailProps> = ({ onBack, onNavigate, setCu
     }
   }, [sequenceProgress, climatesProgress]);
   
-  const yParallax = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"]);
+  const yParallax = useTransform(scrollYProgress, [0, 1], ["0%", "-20%"]);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -121,15 +121,15 @@ const EquatorDetail: React.FC<EquatorDetailProps> = ({ onBack, onNavigate, setCu
         </header>
 
         <div ref={ref} className="w-full h-[60vh] md:h-[100vh] overflow-hidden relative">
-            <motion.div style={{ y: yParallax }} className="w-full h-[120%] relative -top-[10%]">
+            <div className="w-full h-full relative">
                 <img 
                     id="equator-hero"
                     src="/images/dsfsfsd.png" 
                     onError={(e) => e.currentTarget.src = "https://picsum.photos/1920/1080?random=20"}
                     alt="Equator — Patagonia capsule concept hero visual" 
-                    className="w-full h-full object-cover editable-image"
+                    className="w-full h-full object-cover object-top editable-image"
                 />
-            </motion.div>
+            </div>
         </div>
         <div className="px-6 md:px-12 pt-4">
             <p className="font-mono text-xs uppercase tracking-widest opacity-60 text-right">

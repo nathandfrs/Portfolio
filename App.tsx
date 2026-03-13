@@ -89,6 +89,7 @@ const App: React.FC = () => {
   const navigateHome = () => {
       setView('home');
       setActiveProjectId(null);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   const navigateToAllProjects = () => {
