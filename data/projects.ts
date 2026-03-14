@@ -20,7 +20,7 @@ export const allProjects: ExtendedProject[] = [
     title: "Foundation of Doubt",
     category: "Mobile Experience",
     year: "2025",
-    image: "https://picsum.photos/800/600?random=2",
+    image: "images/deavntfondation.jpg",
     description: "Interactive museum companion app.",
     tags: ["UX", "Mobile", "Cultural"]
   },
@@ -29,7 +29,7 @@ export const allProjects: ExtendedProject[] = [
     title: "AALIYA",
     category: "Visual Identity",
     year: "2024",
-    image: "https://picsum.photos/800/600?random=3",
+    image: "images/CHARTE GRAPHIQUE AALIYA.png",
     description: "From fragrance product to identity experience.",
     tags: ["Branding", "Sensory", "Identity"]
   },
